@@ -1,51 +1,54 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "prompt",
- "creation": "2024-09-26 20:49:36.183621",
+ "autoname": "format:{name1}-{###}",
+ "creation": "2024-11-04 16:05:15.810828",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "data_neav",
-  "customer_care",
-  "headquarters",
-  "website"
+  "name1",
+  "email",
+  "phone",
+  "section_break_vgnt",
+  "address"
  ],
  "fields": [
   {
-   "fieldname": "data_neav",
-   "fieldtype": "Int",
-   "label": "Founding Year",
-   "non_negative": 1
-  },
-  {
-   "fieldname": "customer_care",
+   "fieldname": "name1",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Customer Care",
+   "label": "Name",
    "reqd": 1
   },
   {
-   "fieldname": "headquarters",
+   "fieldname": "email",
    "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
    "in_list_view": 1,
-   "label": "Headquarters",
+   "label": "Phone",
    "reqd": 1
   },
   {
-   "fieldname": "website",
-   "fieldtype": "Data",
-   "label": "Website",
-   "options": "URL"
+   "fieldname": "section_break_vgnt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-04 11:52:14.105374",
+ "modified": "2024-11-04 16:06:09.583323",
  "modified_by": "Administrator",
- "module": "Airplane_Mode",
- "name": "Airline",
- "naming_rule": "Set by user",
+ "module": "Airport Shop Management",
+ "name": "Tenant",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

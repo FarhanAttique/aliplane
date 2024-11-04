@@ -38,7 +38,7 @@
    "link_fieldname": "passenger"
   }
  ],
- "modified": "2024-09-28 01:51:47.664719",
+ "modified": "2024-10-30 20:36:26.682966",
  "modified_by": "Administrator",
  "module": "Airplane_Mode",
  "name": "Flight Passenger",
@@ -58,6 +58,7 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

@@ -1,0 +1,36 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-11-04 16:36:29.449567",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "mandatory": 1,
+   "options": "Airport",
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2024-11-04 16:38:09.614779",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Shop Availability",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\r\n    shop.airport AS \"Airport:Link/Airport:150\",\r\n    COUNT(CASE WHEN shop.status = 'Available' THEN 1 END) AS \"Available Shops:Int:150\",\r\n    COUNT(CASE WHEN shop.status = 'Leased' THEN 1 END) AS \"Occupied Shops:Int:150\",\r\n    COUNT(shop.name) AS \"Total Shops:Int:150\"\r\nFROM\r\n    `tabShop` shop\r\nWHERE\r\n    shop.airport = %(airport)s\r\nGROUP BY\r\n    shop.airport\r\n",
+ "ref_doctype": "Shop",
+ "report_name": "Shop Availability",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

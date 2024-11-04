@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "autoname": "format:{shop_number}",
+ "creation": "2024-11-04 15:29:15.555634",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "column_break_ddvo",
+  "shop_name",
+  "area",
+  "airport",
+  "status",
+  "section_break_ggpw",
+  "shop_image",
+  "monthly_rent",
+  "section_break_gdef",
+  "column_break_keqe",
+  "tenant_details",
+  "contract_expiry",
+  "shop_code",
+  "type",
+  "route",
+  "publish"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_ddvo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Float",
+   "label": "Area"
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Airport",
+   "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Available\nLeased",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ggpw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "shop_image",
+   "fieldtype": "Attach Image",
+   "label": "Shop Image"
+  },
+  {
+   "fieldname": "monthly_rent",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Monthly Rent",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_gdef",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_keqe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tenant_details",
+   "fieldtype": "Link",
+   "label": "Tenant Details",
+   "options": "Tenant"
+  },
+  {
+   "fieldname": "contract_expiry",
+   "fieldtype": "Date",
+   "label": "Contract Expiry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "shop_code",
+   "fieldtype": "Data",
+   "label": "Shop Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Food\nOnlyVeg\nGrocery\nTechnology\nOther"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "publish",
+   "fieldtype": "Check",
+   "label": "Publish"
+  }
+ ],
+ "has_web_view": 1,
+ "image_field": "shop_image",
+ "is_published_field": "publish",
+ "links": [],
+ "modified": "2024-11-04 16:08:53.311156",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Shop",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "shops",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "shop_name"
+}

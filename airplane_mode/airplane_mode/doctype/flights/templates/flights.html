@@ -1,0 +1,17 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>{{ title }}</h1>
+
+<h3>Flight Details</h3>
+<ul>
+    <li>Airline: {{ airplane }}</li>
+    <li>{{ source_airport }} -> {{ destination_airport }}</li>
+    <li>{{ date_of_departure }} | {{ time_of_departure }}</li>
+    <li>Duration: {{ frappe.utils.format_duration(doc.duration) }}</li>
+</ul>
+
+
+<a href="/book-flight-ticket/new?flight={{ doc.name }}" class="btn btn-info">Book Flight</a>
+
+{% endblock %}
